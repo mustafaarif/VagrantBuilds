@@ -14,6 +14,11 @@ vagrant up
 ## Fetch information on host/password/IP
 ```sh
 vagrant ssh ws01 -c cat /etc/hosts.info
+vagrant ssh ws02 -c cat /etc/hosts.info
+vagrant ssh ws03 -c cat /etc/hosts.info
+.
+.
+vagrant ssh ws0'n' -c cat /etc/hosts.info
 ```
 ## Destroy VM's
 To destroy VM's, issue below in same directory

@@ -4,6 +4,7 @@
 
 ```sh
 git clone ...
+vagrant up
 ```
 
 ## Login to the VM

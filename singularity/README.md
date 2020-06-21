@@ -1,9 +1,12 @@
 # Vagrant build file for Singularity Linux Containers
 
+This build file installs singularity on Ubuntu VM.
+
 ## Launch the build
 
 ```sh
 git clone ...
+vagrant up
 ```
 
 ## Login to the VM

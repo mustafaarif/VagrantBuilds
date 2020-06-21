@@ -1,0 +1,19 @@
+# Vagrant file for creating Singularity Box from Ubuntu Base box 
+
+BOX_IMAGE = "ubuntu/bionic64"
+
+Vagrant.configure("2") do |host|
+
+  host.vm.define "Singularity-Dev-Host" 
+  host.vm.box = BOX_IMAGE
+  host.vm.hostname = "devhost"
+  host.vm.provision "shell", path: "bootstrap.sh"
+  host.vm.network "public_network", auto_config: false
+  
+  host.vm.provider "virtualbox" do |vb|
+    vb.memory = "4096"
+    vb.cpus = "4"
+    vb.customize ["modifyvm", :id, "--ioapic", "on"]
+  end
+
+end
